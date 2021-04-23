@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;800;900&display=swap');
+
+.page{
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+    
+}
+
+.page img{
+    height:550px;
+    width:350px;
+    align-self: center;
+    
+}
+
+#back img{
+    height:380px;
+    width: 100vw;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 2;
+    margin: 0;
+}
+
+#moon{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#moon img{
+    height: 300px;
+    width: 450px;
+    position: absolute;
+    z-index: 4;
+    margin-top: 150px;
+    animation: rotate 4s ease-in-out infinite;
+    
+}
+
+#moon img:hover{
+   animation: bright 600ms forwards ease-in-out ;
+}
+
+.desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+.desc p{
+    margin: 12px 0;
+}
+
+#line1{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color:rgb(198, 174, 223);
+}
+
+#line2{
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: rebeccapurple;
+}
+
+#line3{
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: rgb(82, 53, 112);
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 350px;
+}
+
+#second{
+    background-color: white;
+}
+
+.section div{
+    width: 80%;
+    height:350px;
+    background-color: rebeccapurple;
+    
+}
+
+.section p{
+    font-size: 50px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+#second p{
+    color: rebeccapurple;
+}
+
+.button{
+    padding: 20px 20px;
+    margin: 20px 20px;
+    background-color: rebeccapurple;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    width: 150px;
+    align-self:center;
+    font-weight: 800;
+    font-size: 20px;
+    border: none;
+    box-shadow: 2px 2px 8px 0.5px rgb(39, 39, 39);
+}
+.button:hover{
+    animation: move 300ms forwards;
+}
+
+.bottom{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#shifts{
+    background:lightpink /*linear-gradient(to top ,lightpink 10% ,transparent 90%)*/;
+    position: absolute;
+    height: 400px;
+    width: 100vw;
+    bottom: 0;
+    z-index: -1;
+    transform: rotateZ(-15deg);
+}
+img[alt="accessories"]{
+    height: 300px;
+    width: 350px;
+    align-self: flex-start;
+    display: none;
+}
+img[alt="pic4"]{
+    height: 300px;
+    width: 350px;
+    margin-top: -10px;
+   
+}
+img[alt="footer"]{
+    height:450px;
+    width:300px;
+    justify-self: center;
+    z-index: -1;
+}
+
+.bottom p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    color:black;
+    text-align:left ;
+    margin-bottom: 5px;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+}
+
+#p2{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+@keyframes rotate{
+    0%{
+    transform: rotateZ(0deg)
+    }
+   
+    100%{
+    transform: rotateZ(360deg)
+    }
+}
+
+@keyframes bright{
+    0%{
+    filter: brightness(1);
+    }
+   
+    100%{
+    filter: brightness(1.2);
+    }
+}
+
+@keyframes move{
+    0%{
+    transform: scale(1);
+    filter: brightness(0);
+    }
+    100%{
+    transform:scale(1.2);
+    filter: brightness(0.2);
+    }
+    
+}
+
+@media(min-width:600px){
+    #back img{
+        height:560px;
+        width: 100vw;
+    }
+    #moon img{
+        height: 400px;
+        width: 600px;
+        margin-top: 300px;
+    }
+    .section p{
+        font-size: 60px;
+    }
+    .section{
+       flex-direction: row;
+       justify-content: center;
+        margin-top: 550px;
+    } 
+    .section div{
+        width: 50%;
+        height:350px;
+    }       
+  
+}
+
+@media(min-width:700px){
+    #back img{
+        height:560px;
+        width: 100vw;
+    }
+    #moon img{
+        height: 400px;
+        width: 600px;
+        margin-top: 300px;
+    }
+    .section{
+       flex-direction: row;
+       justify-content: center;
+        margin-top: 550px;
+    } 
+    .section p{
+        font-size: 70px;
+    }
+    .section div{
+        width: 50%;
+        height:350px;
+    }       
+    .items{
+        display: flex;
+        flex-direction: row;
+    }
+    .page img{
+        margin-top: 30px;
+    }
+    
+}
+
+@media(min-width:1200px){
+    img[alt="accessories"]{
+        display: flex;
+    }
+}
