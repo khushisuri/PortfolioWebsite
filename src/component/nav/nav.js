@@ -1,80 +1,61 @@
-import React, { Component } from "react";
-import "../nav/nav.css";
-import NavItems from "../nav/navitems/navitems";
-import NavItem from "../nav/navitems/navitem/navitem";
-import Sidebar from "../../UI/sidebar/sidebar";
-import Backdrop from "../../UI/backdrop/backdrop"; 
-
+import React, { Component } from 'react';
+import '../nav/nav.css';
+import NavItems from '../nav/navitems/navitems';
+import NavItem from '../nav/navitems/navitem/navitem';
+import Sidebar from '../../UI/sidebar/sidebar';
+import Backdrop from '../../UI/backdrop/backdrop';
 
 class Nav extends Component {
-   state={
-       click:false
-   }
+  state = {
+    click: false
+  };
 
-    menuHandler=()=>{
-        this.setState({
-            click:!this.state.click
-        })
+  menuHandler = () => {
+    this.setState({
+      click: !this.state.click
+    });
+  };
+  render() {
+    let backdrop = null;
+
+    if (!this.state.click) {
+      backdrop = null;
+    } else {
+      backdrop = <Backdrop />;
     }
-    render(){
-       
-       let backdrop=null;
-      
-        if(!this.state.click){
-            backdrop=null
-        }
-        else{
-            backdrop=<Backdrop/>
-        }
 
-        
-
-        return(
-            <div>
-            <div onClick={this.menuHandler}>
-            {backdrop}
-            </div>
+    return (
+      <div>
+        <div onClick={this.menuHandler}>{backdrop}</div>
         <ul className="nav-list">
-                
-                <div className="menu"  onClick={this.menuHandler}>
-                  <li data-aos="fade-in"
-                        data-aos-duration="1000"
-                    >
-                       <div></div>
-                       <div></div>
-                       <div></div>
-                  </li>
-                  
-               </div>
-               
-               <div className="middleNav">
-                   <NavItems/>
-               </div>
-                <Sidebar display={this.state.click}/>
-               
-               <div>
-               <NavItem
-                path="/contact"
-                trans="slide-down"
-                duration="800"
-                easing="ease-in-out"
-                >CONTACT</NavItem>
-                </div>
-            </ul>
-            </div>
-        )
-    }
-    
+          <div className="menu" onClick={this.menuHandler}>
+            <li data-aos="fade-in" data-aos-duration="1000">
+              <div></div>
+              <div></div>
+              <div></div>
+            </li>
+          </div>
+
+          <div className="middleNav">
+            <NavItems />
+          </div>
+          <Sidebar display={this.state.click} />
+
+          <div>
+            <NavItem path="/contact" trans="slide-down" duration="800" easing="ease-in-out">
+              CONTACT
+            </NavItem>
+          </div>
+        </ul>
+      </div>
+    );
+  }
 }
 
 export default Nav;
 
-
-
-
-
 //<Sidebar display={this.state.click}/>
-                
+
 /*<Link to={{pathname:"/page/1",
 search:"address="+this.state.first.address+"&back="+this.state.first.back
 +"&front="+this.state.first.front}

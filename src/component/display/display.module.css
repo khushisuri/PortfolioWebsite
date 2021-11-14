@@ -1,24 +1,23 @@
-.cont{
-    display: flex;
-    flex-direction: column;
-    opacity: 0.8;
+.cont {
+  display: flex;
+  flex-direction: column;
+  opacity: 0.8;
 }
 
-.cont:hover{
-    opacity: 1 ;
+.cont:hover {
+  opacity: 1;
 }
 
-.cont h2{
-    margin-bottom: 0px;
-    color:rgb(33, 23, 51);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+.cont h2 {
+  margin-bottom: 0px;
+  color: rgb(33, 23, 51);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
 }
 
-.cont img{
-    height:230px;
-    width: 250px;
-    box-shadow: 2px 2px 8px 0.2px #cccccc;
-    margin: 20px 20px;
+.cont img {
+  height: 230px;
+  width: 250px;
+  box-shadow: 2px 2px 8px 0.2px #cccccc;
+  margin: 20px 20px;
 }
-

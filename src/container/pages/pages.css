@@ -1,9 +1,9 @@
-.pages{
-    height: auto;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-color:lavender;
+.pages {
+  height: auto;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: lavender;
 }
