@@ -1,8 +1,0 @@
-.slides{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: auto;
-    margin-top: 50px;
-}
